@@ -11,7 +11,7 @@ class Cart extends Component {
     render() {
         
         return (
-            <div className="container" data-test="appComponent">
+            <div className="container" data-test="CartComponent">
                 <div className="cartContainer">
                     {this.getCartItemsDOM()}        
                 </div>
