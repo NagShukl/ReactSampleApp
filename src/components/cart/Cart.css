@@ -1,0 +1,134 @@
+.Cart {
+
+}
+
+.cartContainer> table> tbody> tr> td {
+  
+    vertical-align: top;
+}
+.cartQty {
+    width: 50px;
+    height: 40px;
+    /* background-color: gray; */
+    float: left;
+    margin-bottom: 0px;
+}
+.cartQtyNumber {
+    background-color: lightgray;
+    height: 100%; 
+    vertical-align: middle;
+    border-right: solid thin #ffffff;
+    color: gray;
+}
+.row> .cartQtyNumber {
+    padding-top: 20%;
+}
+
+.decAction {
+    border-bottom: none;
+    border-top: solid thin white;
+    margin-top: 1px;
+}
+.incAction {
+    border-bottom: solid thin #ffffff;
+    border-top: none;
+    /* padding-bottom: 16px; */
+}
+.decAction:hover, .incAction:hover {
+    font-weight: bolder;
+    cursor: pointer;
+}
+.row> .cartQtAction {
+    padding: 0px;
+    padding-left: 1px;
+    padding-right: 0px;
+   
+}
+.row> .cartQtAction> div {
+    width: 20px;
+    height: 19px;
+    background-color: lightgray;
+    /* padding: 5px; */
+    text-align: center;
+}
+.removeItemAction {
+    font-size: 23pt;
+    font-weight: 100;
+    text-align: right;
+    vertical-align: top;
+    margin-top: -12px;
+}
+.removeItemAction:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+.cartItemList{
+    float: none;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.descRowContainer {
+    float: right;
+    width: 40%;
+}
+
+.contShopping {
+    float: left;
+    color: gray;
+    border-bottom: thin black solid;
+    text-transform: uppercase;
+}
+.cartCheckoutBtn {
+    float: right;
+    width: 160px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 0px 6px;
+    border-style: solid;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    border-color: rgb(29, 29, 32);
+    border-width: thin;
+}
+.cartCheckoutBtn:hover {
+    background-color: #000000;
+    color: #ffffff
+}
+table> thead> tr> th {
+    text-transform: uppercase;
+    color: lightgray;
+}
+.cartdetailPrice {
+    font-weight: 500;
+    color: gray;
+    line-height: 1;
+    margin-top: .5rem;
+}
+.cartdetailPrice:before { 
+    content:'$'; 
+    font-weight: bold;
+}
+.alignRight {
+    text-align: right;
+    color: gray;
+}
+.desctitle {
+    text-align: left;
+    text-transform: uppercase;
+    color: gray;
+    float: none;
+}
+.actionth {
+    text-align: right;
+    width: 10%;
+}
+.productth {
+    text-align: left;
+    width: 70%;
+}

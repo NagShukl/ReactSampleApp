@@ -1,0 +1,113 @@
+.cartItemContainer {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 5px;
+    /* margin-top: 23px; */
+}
+.itemListContainer {
+    width: 100%;
+    height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    /* margin-top: 10px;    */
+}
+.listCartItem {
+    float: left;
+}
+.listCartItemLast {
+    /* float: none; */
+    margin-top: -25px;
+    padding-left: 10px;
+    font-size: 0.9rem;
+    color: rgb(29, 29, 32);
+}
+.listCartItemLast:hover {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.cartItemImage {
+    width: 75px;
+    height: 75px;
+}
+.cartItemDesc {
+    width:  calc(100% - 100px);
+    height: auto;
+    margin-left: 5px;
+}
+.cartItemTitle {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    margin-top: 2px;
+    /* line-height: 0.5; */
+    width: 100%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.cartItemContent {
+    font-weight: 300;
+    color: #34313f;
+    font-size: .88235rem;
+    line-height: .8; 
+    margin-top: .5rem;
+}
+.cartPrice {
+    font-weight: 500;
+    color: #34313f;
+    font-size: .88235rem;
+    line-height: 1;
+    margin-top: .5rem;
+}
+.cartPrice:before { 
+    content:'$'; 
+    font-weight: bold;
+}
+.cartPopupAction {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 0px 6px;
+    border-style: solid;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    height: 45px;
+    line-height: 40px;
+    width: 40%;
+    text-align: center;
+    border-color: rgb(29, 29, 32);
+    border-width: thin;
+}
+.cartPopupAction:hover {
+    background: #000000;
+    color: #ffffff;
+    
+}
+.disableVC {
+    pointer-events: none;
+    cursor: not-allowed;
+    background: lightgray;
+    color: gray;
+}
+.cartPopupActionContainer {
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: rgb(29, 29, 32);
+}
+.cartTotal {
+    float: left;
+    text-transform: uppercase;
+    color: rgb(29, 29, 32);
+}
+.cartTotalAmt {
+    float: right;
+    color: rgb(29, 29, 32);
+}
+.clearFloat {
+    clear: both;
+}
