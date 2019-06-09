@@ -37,7 +37,6 @@ class App extends Component {
       // ...then we update the state of our application
       .then(
         data => {
-          alert('**JSR,...' + data);
           this.props.loadProducts(data);
           this.setState({
             items: data

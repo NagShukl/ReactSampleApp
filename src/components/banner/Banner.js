@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BigCUtils from '../utils/BigCUtils';
+import './Banner.css'
 
 
 class Banner extends Component {

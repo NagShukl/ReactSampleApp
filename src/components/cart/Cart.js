@@ -48,7 +48,7 @@ class Cart extends Component {
                                 {item.quantity}
                             </div>
                             <div className="col s2 cartQtAction">
-                                <div className="incAction" onClick={() => { this.incrementQuantity(item.id) }}>&#43;</div>
+                                <div data-test="incActionBtn" className="incAction" onClick={() => { this.incrementQuantity(item.id) }}>&#43;</div>
 
                                 <div className="decAction" onClick={() => { this.decrementQuantity(item.id) }}>&minus;</div>
                             </div>

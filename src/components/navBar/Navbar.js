@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import logo from '../../jsrImgs/bc-logo-bright.svg';
+import logo from '../../logo.png';
 import BigCUtils from '../utils/BigCUtils';
 import CartPopUp from "../cartPopUp/CartPopUp";
 import "./navBar.css";
@@ -22,11 +22,12 @@ class BigCNavBar extends Component {
     }
     renderNavBar = () => {
         return (
+            <header>
             <nav className="nav-wrapper">
                 <div className="container">
                     <div className="width25left">
                         <Link to="/" className="brand-logo">
-                            <img src={logo} alt="logo" />
+                            <img src={logo} alt="logo" className="logo"/>
                         </Link>
                     </div>
                     <div className="width25right">
@@ -53,6 +54,7 @@ class BigCNavBar extends Component {
 
                 </div>
             </nav>
+            </header>
         )
     }
     getCartPopUpDOM = () => {
