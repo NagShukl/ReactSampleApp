@@ -12,22 +12,20 @@ import { loadProducts } from './components/actions/bcActions';
 class App extends Component {
   constructor(props) {
     super(props);
-    console.log('**JSR,...App Comp Constructor is called!!');
-  this.fetchProducts();
+    this.fetchProducts();
   }
   render() {
-    console.log('**JSR,...App Comp render is called!!');
     return (
       <div className="App" data-test="appComponent">
-       
+
         <div>
-        <BigCNavBar></BigCNavBar>
+          <BigCNavBar></BigCNavBar>
         </div>
-        <div style={{float:'none'}}></div>
+        <div style={{ float: 'none' }}></div>
         <Route path="/cart" render={props => <Cart {...props} />} />
         <Route exact path="/" render={props => <Category {...props} />} />
-        <Route path="/product/:id"  render={props => <ProductDetail {...props} />}/>
-       
+        <Route path="/product/:id" render={props => <ProductDetail {...props} />} />
+
       </div>
     );
   }
@@ -38,23 +36,24 @@ class App extends Component {
       .then(response => response.json())
       // ...then we update the state of our application
       .then(
-        data => {alert('**JSR,...'+data);
-        this.props.loadProducts(data);
+        data => {
+          alert('**JSR,...' + data);
+          this.props.loadProducts(data);
           this.setState({
             items: data
           })
         }
       )
       // If we catch errors instead of a response, let's update the app
-      .catch(error => { alert('**JSR,...'+error); this.setState({ items: [] })});
+      .catch(error => { alert('**JSR,...' + error); this.setState({ items: [] }) });
   }
 }
-const mapDispatchToProps= (dispatch)=>{
-  return{
-     loadProducts: (products)=>{dispatch(loadProducts(products))}
-       }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loadProducts: (products) => { dispatch(loadProducts(products)) }
   }
-const mapStateToProps = (state)=>{
+}
+const mapStateToProps = (state) => {
   return {
     items: state.items
   }

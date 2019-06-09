@@ -29,7 +29,6 @@ class Cart extends Component {
         );
     }
     getItemListDOM = () => {
-        console.log('**JSR,...getItemListDOM '+this.props.items.length);
         return this.props.items.map(item => {
             return (
                 <tr key={item.id} data-test="CartItemRow">
@@ -102,7 +101,6 @@ class Cart extends Component {
         </td></tr>);
     }
     incrementQuantity = (id) => {
-        console.log('*************AAAAAAAa '+id);
         this.props.incrementQuantity(id);
     }
     decrementQuantity = (id) => {

@@ -40,11 +40,7 @@ import { formatPrice, images } from '../utils/BigCUtils';
     }
     handleAddToCart = (id) => {
        this.props.addToCart(id);
-    }
-    handleViewDetails = (id) => {
-        console.log('This is show details');
-    }
-    
+    }    
 }
 
 const mapDispatchToProps= (dispatch)=>{

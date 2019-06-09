@@ -91,9 +91,7 @@ class ProductDetail extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToCart: (id) => { dispatch(addToCart(id)) },
-        //    incrementQuantity: (id )=> {dispatch(addToCart(id))},
-        //     decrementQuantity: (id) => {dispatch(reduceQuantity(id))},
+        addToCart: (id) => { dispatch(addToCart(id)) }
     }
 }
 const mapStateToProps = (state) => {

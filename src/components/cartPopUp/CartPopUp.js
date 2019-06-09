@@ -24,22 +24,20 @@ import { removeFromCart } from '../actions/bcActions';
     getListItems = () => {
         return this.props.items.map(item=>{
             return(
-                
-                    
-                        <div className="cartItemContainer" key={item.id}>
-                            <div className="listCartItem cartItemImage">
-                                <img src={images(`./${item.image}`)} className="cartItemImage" alt={item.title}/>
-                            </div>
-                            <div className="listCartItem cartItemDesc">
-                                <h3 className="cartItemTitle">{item.title}</h3>
-                                <div className="cartItemContent">x&nbsp;&nbsp;{item.quantity}</div>
-                                <div className="cartItemContent">{item.brand}</div>
-                                <p className="cartPrice"><b>{formatPrice(item.price)}</b></p>
-                            </div>
-                            <div className="listCartItem listCartItemLast" onClick={()=>{this.removeFromCart(item.id)}}>
-                            x
-                            </div>
-                        </div>
+                <div className="cartItemContainer" key={item.id}>
+                    <div className="listCartItem cartItemImage">
+                        <img src={images(`./${item.image}`)} className="cartItemImage" alt={item.title}/>
+                    </div>
+                    <div className="listCartItem cartItemDesc">
+                        <h3 className="cartItemTitle">{item.title}</h3>
+                        <div className="cartItemContent">x&nbsp;&nbsp;{item.quantity}</div>
+                        <div className="cartItemContent">{item.brand}</div>
+                        <p className="cartPrice"><b>{formatPrice(item.price)}</b></p>
+                    </div>
+                    <div className="listCartItem listCartItemLast" onClick={()=>{this.removeFromCart(item.id)}}>
+                    x
+                    </div>
+                </div>
             )
         });
     }
@@ -70,16 +68,6 @@ import { removeFromCart } from '../actions/bcActions';
     }
     removeFromCart = (id) => {
         this.props.removeFromCart(id);
-    }
-    // navigateToCartView = () => {
-    //     console.log('Navigate to cart view');
-    // }
-    // handleAddToCart = (id) => {
-    //    this.props.addToCart(id);
-    // }
-    // <JSR_TODO> check if it needed or not
-    handleViewDetails = (id) => {
-        console.log('This is show details');
     }
 }
 
