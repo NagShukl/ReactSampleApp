@@ -13,11 +13,11 @@ const setUp = (initialState={}) => {
     const store = createStore(bcReducer);
     // const aa = shallow(<App store={store} />);
     // console.log('**JSR,... '+aa);
-    console.log('**JSR,...wrapper 111= '+JSON.stringify( shallow(<Router><App store={store}/></Router>)));
-    console.log('**JSR,...wrapper 222 = '+JSON.stringify( shallow(<Router><App store={store}/></Router>).childAt(0).dive()));
-    console.log('**JSR,...wrapper 333 = '+JSON.stringify( shallow(<Router><App store={store}/></Router>).children.length));
+    // console.log('**JSR,...wrapper 111= '+JSON.stringify( shallow(<Router><App store={store}/></Router>)));
+    // console.log('**JSR,...wrapper 222 = '+JSON.stringify( shallow(<Router><App store={store}/></Router>).childAt(0).dive()));
+    // console.log('**JSR,...wrapper 333 = '+JSON.stringify( shallow(<Router><App store={store}/></Router>).children.length));
     const wrapper = shallow(<Router><App store={store}/></Router>).childAt(0).dive();
-    console.log('**JSR,...wrapper= '+JSON.stringify(wrapper));
+    // console.log('**JSR,...wrapper= '+JSON.stringify(wrapper));
     return wrapper;
 };
 
@@ -39,7 +39,7 @@ describe('App Component', () => {
         //     }]
         // }
         wrapper = setUp(initState);
-        console.log('**JSR,...beforeEach : ',wrapper);
+        // console.log('**JSR,...beforeEach : ',wrapper);
     });
 
     it('Should render without errors **JSR', () => {
