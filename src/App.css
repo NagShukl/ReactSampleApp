@@ -1,4 +1,6 @@
 .container {
   width: 90%;
 }
-
+.contentHolder {
+  padding-top: 65px;
+}

@@ -8,33 +8,34 @@ import Cart from "./components/cart/Cart";
 import BigCNavBar from "./components/navBar/Navbar";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import { loadProducts } from './components/actions/bcActions';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.fetchProducts();
   }
   render() {
     return (
+      <Router data-test="routerComponent">
       <div className="App" data-test="appComponent">
-
         <div>
-          <BigCNavBar></BigCNavBar>
+          <BigCNavBar data-test="navComponent"></BigCNavBar>
         </div>
-        <div style={{ float: 'none' }}></div>
+        <div className="contentHolder"></div>
         <Route path="/cart" render={props => <Cart {...props} />} />
         <Route exact path="/" render={props => <Category {...props} />} />
         <Route path="/product/:id" render={props => <ProductDetail {...props} />} />
-
+        
       </div>
+      </Router>
     );
   }
+  componentDidMount() {
+    this.fetchProducts();
+  }
   fetchProducts = () => {
-    // The API where we're fetching data from
-    fetch(`http://localhost:3000/products.json`)
-      // We get a response and receive the data in JSON format...
+    fetch(`/products.json`)
       .then(response => response.json())
-      // ...then we update the state of our application
       .then(
         data => {
           this.props.loadProducts(data);
@@ -43,8 +44,7 @@ class App extends Component {
           })
         }
       )
-      // If we catch errors instead of a response, let's update the app
-      .catch(error => { alert('**JSR,...' + error); this.setState({ items: [] }) });
+      .catch(error => { console.log('**Error,...Unable to load Product data!' + error); this.setState({ items: [] }) });
   }
 }
 const mapDispatchToProps = (dispatch) => {
@@ -57,9 +57,5 @@ const mapStateToProps = (state) => {
     items: state.items
   }
 }
-const sum = (a, b) => {
-  return a + b;
-}
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
-// export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App)
 

@@ -23,16 +23,11 @@ class Banner extends Component {
                 <h4 data-test="BannerComponent-UnknownCategory">Either unknown category Or too many matches!</h4>
             </div>)
         }
-        const mystyle = {
-            backgroundImage: 'url(' + category.rightImage + ')',
-            backgroundSize: 'cover',
-            overflow: 'hidden',
-            width: '100%',
-            height: '300px',
-            backgroundRepeat: 'no-repeat',
+        const bannerImg = {
+            backgroundImage: 'url(' + category.rightImage + ')'
         };
         return (
-            <div key={category.id} style={mystyle}>
+            <div key={category.id} style={bannerImg} className="bannerContainer">
 
                 <div className="pageheader">
                     <div className="topGap">
