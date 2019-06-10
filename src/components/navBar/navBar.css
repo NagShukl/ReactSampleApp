@@ -4,6 +4,7 @@ nav {
     width: 100%;
     top: 0px;
     z-index: 9999;
+    text-transform: uppercase;
   }
   ul> li> a {
     color: #000000;
