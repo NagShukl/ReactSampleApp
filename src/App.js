@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
 import Category from "./components/category/Category";
@@ -11,9 +10,7 @@ import { loadProducts } from './components/actions/bcActions';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+ 
   render() {
     return (
       <Router data-test="routerComponent">

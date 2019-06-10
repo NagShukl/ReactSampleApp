@@ -7,7 +7,7 @@ const initState = {
   addedItems: [],
   total: 0
 };
-// Redux - reducer method, to update Redux state  
+ 
 const bcReducer = (state = initState, action) => {
   switch (action.type) {
     case INITIAL_DATA:
@@ -56,6 +56,7 @@ const removeProductFromCart = (id, state) => {
     if (ele.id !== id) {
       return ele;
     }
+    return null;
   });
 }
 const loadProducts = (products, state) => {
