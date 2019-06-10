@@ -1,5 +1,22 @@
 .topRow {
-    margin-top: 10%;
+    margin: 5%;
+}
+.breadCrumb {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.breadCrumbLink {
+    color: #000000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.breadCrumbText {
+    display: inline;
+    margin-left: 10px;
+    color: gray;
+
 }
 .productDetailItemImage {
     width: 100%;
@@ -33,11 +50,7 @@
     width: auto;
     height: auto;
 }
-/* .productAddToCartActionCOntainer {
-    margin-left: 20px;
-    width: 100%;
-    float: right;
-} */
+
 .productAddToCartAction {
     background-color: rgb(74, 74, 77);
     color: white;

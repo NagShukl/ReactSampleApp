@@ -3,7 +3,7 @@ import '../ProductDetail/ProductDetail.css';
 import { connect } from 'react-redux';
 import { addToCart } from '../actions/bcActions';
 import { formatPrice, images } from '../utils/BigCUtils';
-
+import { Link } from 'react-router-dom';
 
 class ProductDetail extends Component {
     constructor(props) {
@@ -28,6 +28,15 @@ class ProductDetail extends Component {
         return (
             <div className="container">
                 <div className="row topRow">
+                <div className="col s12 breadCrumb">
+                <Link to="/" className="breadCrumbLink">home</Link>
+                /
+                <Link to="/" className="breadCrumbLink">plates</Link>
+                /
+                <p className="breadCrumbText">{item.title}</p>
+                </div>
+                </div>
+                <div className="row">
 
                     <div className="col s6">
                         <img src={images(`./${item.image}`)} className="productDetailItemImage" alt={item.title} />
