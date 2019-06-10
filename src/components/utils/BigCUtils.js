@@ -9,9 +9,9 @@ const BigCUtils = {
 
     navLinks: [
         { title: 'HOME', path: '/', alt: 'Home' },
-        { title: 'SHOP', path: '/shop', alt: 'Shop', subMenu: 'ShopSubMenu' },
-        { title: 'JOURNAL', path: '/journal', alt: 'Journal' },
-        { title: 'MORE', path: '/more', alt: 'More',  subMenu: 'moreSubMenu' }
+        { title: 'SHOP', path: '/', alt: 'Shop', subMenu: 'ShopSubMenu' },
+        { title: 'JOURNAL', path: '/', alt: 'Journal' },
+        { title: 'MORE', path: '/', alt: 'More',  subMenu: 'moreSubMenu' }
     ],
     categoriesBanner: [
         { id:'plates', title: 'Plates', description: 'Some category description here! This is the description for Plates category!', leftImage: '../../jsrImgs/plate-left.png', rightImage: plateRightImage},
