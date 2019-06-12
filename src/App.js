@@ -13,14 +13,14 @@ class App extends Component {
  
   render() {
     return (
-      <Router data-test="routerComponent">
+      <Router data-test="routerComponent" basename="/ReactSampleApp">
       <div className="App" data-test="appComponent">
         <div>
           <BigCNavBar data-test="navComponent"></BigCNavBar>
         </div>
         <div className="contentHolder"></div>
-        <Route path="cart" render={props => <Cart {...props} />} />
-        <Route exact path="" render={props => <Category {...props} />} />
+        <Route path="/cart" render={props => <Cart {...props} />} />
+        <Route exact path="/" render={props => <Category {...props} />} />
         <Route path="/product/:id" render={props => <ProductDetail {...props} />} />
         
       </div>
