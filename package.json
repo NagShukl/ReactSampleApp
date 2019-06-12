@@ -3,23 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-plugin-require-context-hook": "^1.0.0",
+    "gh-pages": "^2.0.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.3",
     "react-redux": "^7.0.3",
     "react-router-dom": "^ 5.0.1",
+    "react-scripts": "2.1.3",
     "react-test-renderer": "^16.8.6",
-    "redux": "^4.0.1",
-    "axios": "^0.18.0",
-    "prop-types": "^15.7.2"
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-all": "react-scripts test --watchAll",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
@@ -35,6 +38,7 @@
     "moxios": "^0.4.0",
     "jest": "^23.6.0"
   },
+  "homepage": "https://nagshukl.github.io/ReactSampleApp",
   "browserslist": {
     "production": [
       ">0.2%",
