@@ -15,7 +15,7 @@ import { formatPrice, images } from '../utils/BigCUtils';
                         <div className="card-image">
                             <img src={images(`./${item.image}`)} className="productImage" alt={item.title}/>
                             <div className="productOverlay">
-                            <Link to={`product/${ item.id }`}>
+                            <Link to={`/product/${ item.id }`}>
                                 <div className="overlayActionText">View Details</div>
                             </Link>
                                 <div className="overlayActionText" onClick={()=>{this.handleAddToCart(item.id)}}>Add to Cart</div>

@@ -51,7 +51,7 @@ import { removeFromCart } from '../actions/bcActions';
 
                 </div>
                 <div className="clearFloat">
-                    <Link to="cart" className={this.getViewCartActionCSS()}>
+                    <Link to="/cart" className={this.getViewCartActionCSS()}>
                         view cart</Link>
                     <a href="#!" className="cartPopupAction">checkout</a>
                 </div>
@@ -61,7 +61,7 @@ import { removeFromCart } from '../actions/bcActions';
     }
     getViewCartActionCSS = () => {
         let res = 'cartPopupAction';
-        if(this.props.location.pathname === 'cart') {
+        if(this.props.location.pathname === '/cart') {
             res += ' disableVC';
         }
         return res;
