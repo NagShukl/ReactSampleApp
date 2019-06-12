@@ -19,8 +19,8 @@ class App extends Component {
           <BigCNavBar data-test="navComponent"></BigCNavBar>
         </div>
         <div className="contentHolder"></div>
-        <Route path="/cart" render={props => <Cart {...props} />} />
-        <Route exact path="/" render={props => <Category {...props} />} />
+        <Route path="cart" render={props => <Cart {...props} />} />
+        <Route exact path="" render={props => <Category {...props} />} />
         <Route path="/product/:id" render={props => <ProductDetail {...props} />} />
         
       </div>
