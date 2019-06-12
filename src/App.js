@@ -31,7 +31,7 @@ class App extends Component {
     this.fetchProducts();
   }
   fetchProducts = () => {
-    fetch(`/products.json`)
+    fetch(`static/products.json`)
       .then(response => response.json())
       .then(
         data => {
